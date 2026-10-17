@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinépolis</title>
+<!-- Solo para efectos al pasar el mouse (no se pueden hacer con style=) -->
+</head>
+<body style="margin:0; background:#eaedf2; font-family:Arial, Helvetica, sans-serif; color:#333;">
+
+<!-- Encabezado -->
+<header style="background:#0b1d3a; padding:12px 30px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; border-bottom:4px solid #fbd304; position:sticky; top:0; z-index:10;">
+  <h1 style="margin:0; font-size:32px; color:#fff;">Ciné<span style="color:#f1f0ed;">polis</span></h1>
+  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+    <select style="padding:8px; border-radius:4px; border:none; font-weight:bold;"><option>Selecciona tu ciudad</option><option>CDMX</option><option>Guadalajara</option><option>Monterrey</option><option>Morelia</option></select>
+    <select style="padding:8px; border-radius:4px; border:none; font-weight:bold;"><option> Selecciona tu cine</option><option>Cinépolis Centro</option><option>Cinépolis VIP Plaza</option><option>Cinépolis IMAX</option></select>
+    <a href="#promos" style="background:#e5e3dd; color:#000; padding:8px 14px; border-radius:4px; font-weight:bold; text-decoration:none;">Club Cinépolis</a>
+  </div>
+</header>
+
+<!-- Navegación -->
+<nav style="background:#061224; display:flex; justify-content:center; gap:25px; padding:12px; flex-wrap:wrap;">
+  <a href="#s1" style="color:#fff; text-decoration:none; font-size:13px; font-weight:bold;">DESTACADAS</a>
+  <a href="#cartelera" style="color:#fff; text-decoration:none; font-size:13px; font-weight:bold;">CARTELERA</a>
+  <a href="#preventa" style="color:#fff; text-decoration:none; font-size:13px; font-weight:bold;">PREVENTA</a>
+  <a href="#dulceria" style="color:#fff; text-decoration:none; font-size:13px; font-weight:bold;">DULCERÍA</a>
+  <a href="#promos" style="color:#fff; text-decoration:none; font-size:13px; font-weight:bold;">PROMOCIONES</a>
+</nav>
+
+<!-- ===== Destacadas (carrusel sin JavaScript: las flechas son enlaces a cada diapositiva) ===== -->
+<section style="display:flex; overflow-x:hidden; scroll-behavior:smooth; background:linear-gradient(135deg,#0b1d3a,#050f1e); color:#fff;">
+
+  <div id="s1" style="min-width:100%; box-sizing:border-box; position:relative; scroll-margin-top:80px; display:flex; justify-content:center; align-items:center; gap:40px; padding:50px 70px; flex-wrap:wrap;">
+    <a href="#s4" style="position:absolute; left:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10094;</a>
+    <a href="#s2" style="position:absolute; right:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10095;</a>
+    <div style="display:flex; flex-direction:column; gap:15px; width:220px;">
+      <img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/AvengersDoomsday/Es/19_Poster_720x1022px_2_2.jpg" alt="Avengers: Doomsday" style="width:220px; border-radius:8px; box-shadow:0 10px 20px rgba(0,0,0,.5);">
+      <a href="#preventa" style="padding:12px; background:#ffffff; color:#000; font-weight:bold; text-decoration:none; border-radius:4px; text-align:center;">COMPRAR BOLETOS</a>
+    </div>
+    <div style="max-width:400px;">
+      <h2 style="margin:0 0 10px; font-size:32px; color:#f8f8f8;">AVENGERS: DOOMSDAY</h2>
+      <p style="font-size:16px; line-height:1.5; color:#d5dbe5;">Los Vengadores se enfrentan a Doctor Doom. Estreno 17 de diciembre,la pelicula en la que vuelve tu ex</p>
+      <p style="font-size:13px; color:#8d9db6; font-weight:bold;">PREVENTA • 17 DIC</p>
+    </div>
+  </div>
+
+  <div id="s2" style="min-width:100%; box-sizing:border-box; position:relative; scroll-margin-top:80px; display:flex; justify-content:center; align-items:center; gap:40px; padding:50px 70px; flex-wrap:wrap;">
+    <a href="#s1" style="position:absolute; left:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10094;</a>
+    <a href="#s3" style="position:absolute; right:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10095;</a>
+    <div style="display:flex; flex-direction:column; gap:15px; width:220px;">
+      <img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/SpiderManUnNuevoDia/Es/SMBND_720x1022_2.jpg" alt="Spider-Man: Un Nuevo Día" style="width:220px; border-radius:8px; box-shadow:0 10px 20px rgba(0,0,0,.5);">
+      <a href="#cartelera" style="padding:12px; background:#f7f7f5; color:#000; font-weight:bold; text-decoration:none; border-radius:4px; text-align:center;">COMPRAR BOLETOS</a>
+    </div>
+    <div style="max-width:400px;">
+      <h2 style="margin:0 0 10px; font-size:32px; color:#fffffe;">SPIDER-MAN: UN NUEVO DÍA</h2>
+      <p style="font-size:16px; line-height:1.5; color:#d5dbe5;">Peter Parker regresa en una nueva aventura. ¡Ya en cartelera!</p>
+      <p style="font-size:13px; color:#8d9db6; font-weight:bold;">CLASIFICACIÓN B</p>
+    </div>
+  </div>
+
+  <div id="s3" style="min-width:100%; box-sizing:border-box; position:relative; scroll-margin-top:80px; display:flex; justify-content:center; align-items:center; gap:40px; padding:50px 70px; flex-wrap:wrap;">
+    <a href="#s2" style="position:absolute; left:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10094;</a>
+    <a href="#s4" style="position:absolute; right:15px; top:45%; color:#fff; font-size:30px; text-decoration:none;">&#10095;</a>
+    <div style="display:flex; flex-direction:column; gap:15px; width:220px;">
+      <img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/DunaParte3/Es/dune_3_720x1022_2.jpg" alt="Duna: Parte Tres" style="width:220px; border-radius:8px; box-shadow:0 10px 20px rgba(0,0,0,.5);">
+      <a href="#preventa" style="padding:12px; background:#f3f1ea; color:#000; font-weight:bold; text-decoration:none; border-radius:4px; text-align:center;">COMPRAR BOLETOS</a>
+    </div>
+    <div style="max-width:400px;">
+      <h2 style="margin:0 0 10px; font-size:32px; color:#fbd304;">DUNA: PARTE TRES</h2>
+      <p style="font-size:16px; line-height:1.5; color:#d5dbe5;">El final de la saga de Arrakis. Vívela en IMAX y 4DX.</p>
+      <p style="font-size:13px; color:#8d9db6; font-weight:bold;">PREVENTA • 17 DIC</p>
+    </div>
+  </div>
+    <div style="max-width:400px;">
+      <h2 style="margin:0 0 10px; font-size:32px; color:#fbd304;">ESTRENO EXCLUSIVO</h2>
+      <p style="font-size:16px; line-height:1.5; color:#d5dbe5;">La película en la que vuelve tu ex... ¡No te la pierdas en la pantalla grande!</p>
+      <p style="font-size:13px; color:#8d9db6; font-weight:bold;">CLASIFICACIÓN B15 • 120 MIN</p>
+    </div>
+  </div>
+</section>
+
+<main style="max-width:1100px; margin:0 auto; padding:0 20px;">
+  <!-- ===== Cartelera ===== -->
+  <h2 id="cartelera" style="margin:40px 0 20px; color:#0b1d3a; font-size:24px; border-left:5px solid #fbd304; padding-left:10px; scroll-margin-top:80px;">En Cartelera</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:24px;">
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/SpiderManUnNuevoDia/Es/SMBND_720x1022_2.jpg" alt="Spider-Man: Un Nuevo Día" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Spider-Man: Un Nuevo Día</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/StreetFighter/Es/sf_desktop_poster_720x1022_2.jpg" alt="Street Fighter" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Street Fighter</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/LaOdisea/Es/9_P_ster_720x1022px__2.jpg" alt="La Odisea" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">La Odisea</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/Clayface/Es/P_720X1022_5.jpg" alt="Clayface" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">C</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Clayface</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/ResidentEvilNocheCero/Es/RE_720x1022_2.jpg" alt="Resident Evil: Noche Cero" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B15</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Resident Evil: Noche Cero</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/VerityLaSombraDeUnEngano/Es/VRTY_2026_Desktop_Cinepolis_Poster_720x1022_2.jpg" alt="Verity" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B15</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Verity: La Sombra De Un Engaño</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/CoyoteVsAcme/Es/Poster_720x1022_2.jpg" alt="Coyote Vs Acme" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">A</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Coyote Vs Acme</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/HopeElPrimerImpacto/Es/HOPE_Cinepolis_MX_DESKTOP_720_x_1022_2.jpg" alt="Hope: El Primer Impacto" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B15</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Hope: El Primer Impacto</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/SuperCanino/Es/Poster_720x1022_2.jpg" alt="Súper Canino" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">A</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Súper Canino</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/LaNocheDelDemonioEstanEntreNosotros/Es/INS_720x1022_2.jpg" alt="La Noche Del Demonio" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">La Noche Del Demonio</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/ElLaberintoDelFauno/Es/Poster_WEB_Desktop_720x1022px_43__2.jpg" alt="El Laberinto Del Fauno" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B15</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">El Laberinto Del Fauno</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Reestreno</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/OnePieceLaPelicula2000/Es/P_ster_720x1022px__2.jpg" alt="One Piece: La Película" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">B</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">One Piece: La Película</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">En cartelera</p>
+      <a href="#" style="display:block; padding:10px; background:#0b1d3a; color:#fff; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">COMPRAR BOLETOS</a></div>
+    </div>
+  </div>
+
+  <!-- ===== Preventa ===== -->
+  <h2 id="preventa" style="margin:50px 0 20px; color:#0b1d3a; font-size:24px; border-left:5px solid #fbd304; padding-left:10px; scroll-margin-top:80px;">Preventa</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:24px;">
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/AvengersDoomsday/Es/19_Poster_720x1022px_2_2.jpg" alt="Avengers: Doomsday" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">TBC</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Avengers: Doomsday</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Estreno 17 dic</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/DunaParte3/Es/dune_3_720x1022_2.jpg" alt="Duna: Parte Tres" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">TBC</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Duna: Parte Tres</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Estreno 17 dic</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/GodzillaMinusZero/Es/Poster_720x1022_Godzilla_5ago1_2.jpg" alt="Godzilla Minus Zero" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">TBC</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Godzilla Minus Zero</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Estreno 5 nov</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/LaVenganzaDelCharroNegro/Es/720x1022_copia_5.jpg" alt="La Venganza Del Charro Negro" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">A</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">La Venganza Del Charro Negro</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Estreno 22 oct</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/FiestaPagana/Es/FiestaPagana_720x1022_2.jpg" alt="Fiesta Pagana" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">TBC</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Fiesta Pagana</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Estreno 6 nov</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+
+    <div class="card" style="background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;">
+      <div style="position:relative;"><img src="https://pimcore-content.cinepolis.com/assets/Mexico/Tickets/Movies/RammsteinLiveinMexicoCity/Es/Poster_WEB_Desktop_720x1022px_38__2.jpg" alt="Rammstein: Live in Mexico City" style="width:100%; display:block;"><span style="position:absolute; top:10px; right:10px; background:#0b1d3a; color:#fff; padding:4px 8px; font-size:11px; font-weight:bold; border-radius:3px;">TBC</span></div>
+      <div style="padding:15px;"><h3 style="margin:0 0 6px; font-size:15px; color:#0b1d3a; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Rammstein: Live in Mexico City</h3><p style="margin:0 0 12px; font-size:12px; color:#666;">Función 4 nov</p>
+      <a href="#" style="display:block; padding:10px; background:#fbd304; color:#000; text-align:center; text-decoration:none; border-radius:4px; font-size:13px; font-weight:bold;">PREVENTA</a></div>
+    </div>
+  </div>
+
+  <!-- ===== Dulcería ===== -->
+  <h2 id="dulceria" style="margin:50px 0 20px; color:#0b1d3a; font-size:24px; border-left:5px solid #fbd304; padding-left:10px; scroll-margin-top:80px;">Dulcería</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:24px; text-align:center;">
+    <div class="card" style="background:#fff; border-radius:6px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;"><div style="font-size:60px;">🍿</div><h3 style="margin:10px 0 5px; color:#0b1d3a;">Combo Pareja</h3><p style="margin:0 0 10px; font-size:13px; color:#666;">2 palomitas grandes + 2 refrescos</p><p style="margin:0; font-size:22px; font-weight:bold; color:#0b1d3a;">$249</p></div>
+    <div class="card" style="background:#fff; border-radius:6px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;"><div style="font-size:60px;">🌭</div><h3 style="margin:10px 0 5px; color:#0b1d3a;">Combo Hot Dog</h3><p style="margin:0 0 10px; font-size:13px; color:#666;">Hot dog + palomitas chicas + refresco</p><p style="margin:0; font-size:22px; font-weight:bold; color:#0b1d3a;">$159</p></div>
+    <div class="card" style="background:#fff; border-radius:6px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;"><div style="font-size:60px;">🧀</div><h3 style="margin:10px 0 5px; color:#0b1d3a;">Nachos</h3><p style="margin:0 0 10px; font-size:13px; color:#666;">Nachos con queso y jalapeños</p><p style="margin:0; font-size:22px; font-weight:bold; color:#0b1d3a;">$95</p></div>
+    <div class="card" style="background:#fff; border-radius:6px; padding:25px; box-shadow:0 4px 8px rgba(0,0,0,.08); transition:.3s;"><div style="font-size:60px;">🍫</div><h3 style="margin:10px 0 5px; color:#0b1d3a;">Combo Dulce</h3><p style="margin:0 0 10px; font-size:13px; color:#666;">Chocolates + ICEE mediano</p><p style="margin:0; font-size:22px; font-weight:bold; color:#0b1d3a;">$119</p></div>
+  </div>
+
+  <!-- ===== Promociones ===== -->
+  <h2 id="promos" style="margin:50px 0 20px; color:#0b1d3a; font-size:24px; border-left:5px solid #fbd304; padding-left:10px; scroll-margin-top:80px;">Promociones</h2>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px;">
+    <div style="background:linear-gradient(135deg,#0b1d3a,#1d3d73); color:#fff; padding:30px; border-radius:8px;">
+      <h3 style="margin:0; font-size:26px; color:#fbd304;">Club Cinépolis</h3>
+      <p style="line-height:1.5;">Acumula puntos en cada compra y canjéalos por boletos y combos. ¡Regístrate gratis!</p>
+      <a href="#" style="display:inline-block; background:#fbd304; color:#000; padding:10px 20px; border-radius:4px; font-weight:bold; text-decoration:none;">ÚNETE</a>
+    </div>
+    <div style="background:linear-gradient(135deg,#fbd304,#f5a800); color:#0b1d3a; padding:30px; border-radius:8px;">
+      <h3 style="margin:0; font-size:26px;">Miércoles 2x1</h3>
+      <p style="line-height:1.5;">Todos los miércoles paga un boleto y entran dos. Válido en salas tradicionales.</p>
+      <a href="#cartelera" style="display:inline-block; background:#0b1d3a; color:#fff; padding:10px 20px; border-radius:4px; font-weight:bold; text-decoration:none;">VER CARTELERA</a>
+    </div>
+  </div>
+</main>
+
+<!-- Pie de página -->
+<footer style="background:#061224; color:#8d9db6; padding:30px 20px; margin-top:50px; font-size:13px; text-align:center; border-top:4px solid #fbd304;">
+  <p style="margin:0 0 10px; color:#fff; font-size:20px; font-weight:bold;">Ciné<span style="color:#fbd304;">polis</span></p>
+  <p style="margin:0 0 10px;">Jaquez Camacho Jesus Ariel 0854</p>
+
+</footer>
+
+</body>
+</html>
